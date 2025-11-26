@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Profile Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f8f9fa;
+        }
+
+        header, footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        nav {
+            background-color: #444;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+        }
+
+        th, td {
+            border: 1px solid #aaa;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #ddd;
+        }
+
+        form label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 98%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+
+        input[type="submit"] {
+            margin-top: 15px;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        footer {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My Personal Profile Page</h1>
+    </header>
+
+    <nav>
+        <a href="#profile">Profile</a>
+        <a href="#form">Contact Form</a>
+    </nav>
+
+    <section>
+        <article id="profile">
+            <h2>Personal Information</h2>
+            <table>
+                <tr>
+                    <th>Attribute</th>
+                    <th>Details</th>
+                    <th>Remarks</th>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td>Nur Aliya Farhani Binti Mohd Nasri</td>
+                    <td>Student at Universiti Malaysia Terengganu</td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td>20</td>
+                    <td>Born in Kedah</td>
+                </tr>
+                <tr>
+                    <td>Occupation</td>
+                    <td>University Student</td>
+                    <td>Software Engineering Major</td>
+                </tr>
+            </table>
+        </article>
+
+        <article id="form">
+            <h2>Contact Form</h2>
+            <form action="#" method="post">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label>Gender:</label>
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>
+
+                <label>Favorite Hobbies:</label>
+                <input type="checkbox" id="reading" name="hobby" value="Reading">
+                <label for="reading">Reading</label>
+                <input type="checkbox" id="music" name="hobby" value="Music">
+                <label for="music">Music</label>
+                <input type="checkbox" id="travel" name="hobby" value="Traveling">
+                <label for="travel">Traveling</label>
+				<br>
+                <input type="submit" value="Submit">
+            </form>
+        </article>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Aliya Farhani | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

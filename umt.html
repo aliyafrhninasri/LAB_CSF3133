@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Universiti Malaysia Terengganu</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="umt.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="Logo_Rasmi_UMT.png" alt="UMT logo" class="logo">
+        <div>
+          <h1>Universiti Malaysia Terengganu</h1>
+          <p class="subtitle">Centre of Excellence in Marine & Environmental Studies</p>
+        </div>
+      </div>
+
+      <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav class="main-nav" aria-label="Main navigation">
+    <div class="container">
+      <ul class="nav-list" id="navList">
+        <li class="nav-item has-sub">
+          <a href="#" class="nav-link">ABOUT UMT ▾</a>
+          <ul class="sub-menu">
+            <li><a href="#history">History</a></li>
+            <li><a href="#vision">Vision &amp; Mission</a></li>
+            <li><a href="#leadership">Leadership</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item has-sub">
+          <a href="#" class="nav-link">STUDY ▾</a>
+          <ul class="sub-menu">
+            <li><a href="#undergrad">Undergraduate</a></li>
+            <li><a href="#postgrad">Postgraduate</a></li>
+            <li><a href="#intl">International Students</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item has-sub">
+          <a href="#" class="nav-link">RESEARCH ▾</a>
+          <ul class="sub-menu">
+            <li><a href="#institutes">Institutes</a></li>
+            <li><a href="#pubs">Publications</a></li>
+            <li><a href="#innovation">Innovation</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item has-sub">
+          <a href="#" class="nav-link">CAMPUS LIFE ▾</a>
+          <ul class="sub-menu">
+            <li><a href="#hostel">Hostel</a></li>
+            <li><a href="#clubs">Clubs</a></li>
+            <li><a href="#events">Events</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a href="#contact" class="nav-link">CONTACT</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- SLIDER -->
+  <section class="slider-section" aria-label="Image slider">
+    <div class="slider container" id="slider">
+      <div class="slides">
+        <div class="slide"><img src="umt1.webp" alt="UMT campus 1"></div>
+        <div class="slide"><img src="umt2.jpg" alt="UMT campus 2"></div>
+        <div class="slide"><img src="umt3.jpg" alt="UMT campus 3"></div>
+      </div>
+
+      <button class="slider-btn prev" aria-label="Previous slide">&#10094;</button>
+      <button class="slider-btn next" aria-label="Next slide">&#10095;</button>
+
+      <div class="dots" id="dots"></div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main class="container content">
+    <section id="about">
+      <article>
+        <h2>About Universiti Malaysia Terengganu (UMT)</h2>
+        <p>
+          Universiti Malaysia Terengganu (UMT) is a public university located in Kuala Nerus, Terengganu, Malaysia.
+          It was initially established as the Centre for Fisheries and Marine Science of Universiti Putra Malaysia and later evolved
+          into an independent university with strong emphasis on marine science and environmental studies.
+        </p>
+
+        <p>
+          UMT offers a wide range of undergraduate and postgraduate programs in marine-related fields, environmental science,
+          food technology, engineering and social sciences. The university is actively involved in research, community engagement,
+          and international collaborations.
+        </p>
+      </article>
+    </section>
+
+    <section id="faculties" class="table-wrap">
+      <h3>UMT Main Faculties</h3>
+      <table class="styled-table" aria-describedby="faculty-list">
+        <thead>
+          <tr>
+            <th>Faculty</th>
+            <th>Programs</th>
+            <th>Focus Area</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Faculty of Science and Marine Environment</td><td>BSc / MSc / PhD</td><td>Marine Biology, Oceanography</td></tr>
+          <tr><td>Faculty of Fisheries and Food Science</td><td>BSc / MSc</td><td>Aquaculture, Fishery Management</td></tr>
+          <tr><td>Faculty of Ocean Engineering Technology</td><td>BEng</td><td>Naval Architecture, Marine Engineering</td></tr>
+		  <tr><td>Faculty of Computer Science and Mathematics</td><td>BSc</td><td>Software Engineering, Mobile Computing, Data Analytics, Mathematical Sciences (Applied & Financial Math), Maritime Informatics</td></tr>
+		  <tr><td>Faculty of Maritime Studies</td><td>BSc</td><td>Marine and Maritime Industry</td></tr>
+		  <tr><td>Faculty of Business, Economics and Social Development</td><td>BSc</td><td>Business Studies, Economics, Management, Finance, Accounting, Marketing, Tourism & Hospitality</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Universiti Malaysia Terengganu. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS: slider + mobile menu + dropdown mobile toggle + swipe -->
+  <script>
+    /* ====== Mobile menu toggle ====== */
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const navList = document.getElementById('navList');
+    mobileBtn.addEventListener('click', () => {
+      navList.classList.toggle('open');
+    });
+
+    /* ====== Dropdown: enable click-to-toggle on small screens ====== */
+    document.querySelectorAll('.nav-item.has-sub > .nav-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        // On small screens, clicking top-level should toggle submenu instead of navigating
+        if (window.innerWidth <= 900) {
+          e.preventDefault();
+          const parent = link.parentElement;
+          parent.classList.toggle('open-sub');
+        }
+      });
+    });
+
+    /* ====== Slider logic (arrows, dots, autoplay, swipe) ====== */
+    (function() {
+      const slider = document.getElementById('slider');
+      const slidesWrap = slider.querySelector('.slides');
+      const slides = slider.querySelectorAll('.slide');
+      const prevBtn = slider.querySelector('.prev');
+      const nextBtn = slider.querySelector('.next');
+      const dotsContainer = document.getElementById('dots');
+
+      let idx = 0;
+      const total = slides.length;
+      let autoplay = null;
+      const interval = 4000;
+
+      // create dots
+      for (let i=0;i<total;i++){
+        const d = document.createElement('button');
+        d.className = 'dot';
+        d.setAttribute('aria-label','Go to slide ' + (i+1));
+        d.dataset.index = i;
+        dotsContainer.appendChild(d);
+      }
+      const dots = dotsContainer.querySelectorAll('.dot');
+
+      function goTo(n){
+        idx = (n + total) % total;
+        slidesWrap.style.transform = 'translateX(' + (-idx * 100) + '%)';
+        dots.forEach((dot,i)=> dot.classList.toggle('active', i===idx));
+      }
+
+      function next(){ goTo(idx+1); }
+      function prev(){ goTo(idx-1); }
+
+      nextBtn.addEventListener('click', next);
+      prevBtn.addEventListener('click', prev);
+      dots.forEach(d => d.addEventListener('click', ()=> goTo(Number(d.dataset.index)) ));
+
+      // autoplay
+      function startAuto(){ autoplay = setInterval(next, interval); }
+      function stopAuto(){ clearInterval(autoplay); autoplay = null; }
+      slider.addEventListener('mouseenter', stopAuto);
+      slider.addEventListener('mouseleave', startAuto);
+
+      // touch / swipe
+      let startX = 0;
+      slidesWrap.addEventListener('touchstart', e => startX = e.changedTouches[0].clientX);
+      slidesWrap.addEventListener('touchend', e => {
+        const diff = e.changedTouches[0].clientX - startX;
+        if (Math.abs(diff) > 40) diff > 0 ? prev() : next();
+      });
+
+      // init
+      goTo(0);
+      startAuto();
+    })();
+  </script>
+</body>
+</html>

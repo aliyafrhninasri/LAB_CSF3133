@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab Exercise 4 - Responsive Webpage</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Internal CSS -->
+  <style>
+    header h1 {
+      text-decoration: underline;
+      text-align: center;
+      color: #4a148c;
+    }
+
+    section h2 {
+      text-decoration: overline;
+      color: #6a1b9a;
+    }
+
+    footer p {
+      text-decoration: line-through;
+      color: gray;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to Farhani Webpage</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#video">Video</a></li>
+        <li><a href="#form">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <article>
+        <h2>About This Page</h2>
+        <p>
+          This webpage is created for <strong>Lab Exercise 4</strong> to demonstrate the use of 
+          <em>HTML5 semantic structure, embedded media, forms, and CSS styling</em>. 
+          The design is fully responsive and built using modern web principles.
+        </p>
+      </article>
+    </section>
+
+    <section id="video">
+      <h2>Watch This Video</h2>
+      <video controls width="100%">
+        <source src="upinipin.mp4" type="video/mp4">
+        <track src="caption.vtt" kind="captions" srclang="en" label="English">
+        Your browser does not support HTML5 video.
+      </video>
+      <p><em>Video: A demonstration of creativity and web design principles.</em></p>
+    </section>
+
+    <section id="form">
+      <h2>Contact Form</h2>
+      <form action="#" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label>Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label><br><br>
+
+        <label>Favorite Hobbies:</label><br>
+        <input type="checkbox" id="reading" name="hobby" value="Reading">
+        <label for="reading">Reading</label>
+        <input type="checkbox" id="music" name="hobby" value="Music">
+        <label for="music">Music</label>
+        <input type="checkbox" id="sports" name="hobby" value="Sports">
+        <label for="sports">Sports</label><br><br>
+
+        <input type="submit" value="Submit">
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Farhani Webpage. Designed for Lab Exercise 4.</p>
+  </footer>
+</body>
+</html>

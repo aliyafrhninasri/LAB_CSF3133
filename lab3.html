@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form and Calculator</title>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div bgcolor="lightblue" align="center">
+        <table width="100%" bgcolor="lightblue">
+            <tr>
+                <td>
+                    <h1>My Contact Page <span>- Feedback & Tools</span></h1>
+                    <p>Welcome to my simple webpage. Feel free to contact me or use the mini calculator below!</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <hr>
+
+    <!-- Content Section -->
+    <div>
+        <h2>Contact Form</h2>
+        <form>
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email" placeholder="Enter your email"><br><br>
+
+            <label for="date">Preferred Contact Date:</label><br>
+            <input type="date" id="date" name="date"><br><br>
+
+            <label for="satisfaction">Satisfaction Level (0 - 10):</label><br>
+            <input type="range" id="satisfaction" name="satisfaction" min="0" max="10"><br><br>
+
+            <label for="message">Your Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="40" placeholder="Type your message here..."></textarea><br><br>
+
+            <input type="submit" value="Send Message">
+        </form>
+    </div>
+
+    <hr>
+
+    <!-- Inline Calculator Section -->
+    <div>
+        <h2>Inline Calculator</h2>
+        <p>Enter two numbers below to calculate their sum:</p>
+
+        <label>First number:</label>
+        <input type="number" id="num1" value="0">
+        <label>Second number:</label>
+        <input type="number" id="num2" value="0"> =
+        <output id="sum">0</output>
+
+        <script>
+            const num1 = document.getElementById("num1");
+            const num2 = document.getElementById("num2");
+            const sum = document.getElementById("sum");
+
+            function calculateSum() {
+                sum.value = Number(num1.value) + Number(num2.value);
+            }
+
+            num1.addEventListener("input", calculateSum);
+            num2.addEventListener("input", calculateSum);
+        </script>
+    </div>
+
+    <hr>
+
+    <!-- Footer Section -->
+    <div bgcolor="lightgray" align="center">
+        <p>Contact us at: aliyafarhani@info.com</p>
+        <p>&copy; 2025 Aliya Simple Contact Page. All Rights Reserved.</p>
+    </div>
+
+</body>
+</html>
