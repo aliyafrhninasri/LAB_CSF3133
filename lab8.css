@@ -1,0 +1,52 @@
+/* Custom Variables */
+:root {
+    --bs-primary: #ff3385; /* Pink Gempak */
+    --bs-primary-rgb: 255, 51, 133;
+    --dark-bg: #1a1a1a;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Hero Section Gempak */
+.hero-section {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Color Overrides */
+.text-primary {
+    color: var(--bs-primary) !important;
+}
+
+.btn-primary {
+    background-color: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #e62e77 !important;
+    transform: translateY(-3px);
+}
+
+/* Card Hover Animation */
+.custom-card {
+    transition: 0.3s;
+    border-bottom: 4px solid transparent !important;
+}
+
+.custom-card:hover {
+    transform: translateY(-10px);
+    border-bottom: 4px solid var(--bs-primary) !important;
+}
+
+/* Smooth Navigation highlight */
+.nav-link:hover {
+    color: var(--bs-primary) !important;
+}

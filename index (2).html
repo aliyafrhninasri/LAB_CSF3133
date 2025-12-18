@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lab 7 Project</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <h1>Welcome to My Web</h1>
+  <p>Hye</p>
+</header>
+
+<!-- IMAGE TEXT -->
+<section class="image-container">
+  <img src="ff5.jpeg">
+  <div class="overlay-text">Explore Your Future</div>
+</section>
+
+<!-- FORM -->
+<section class="form-section">
+  <img src="ff6.jpeg">
+  <div class="form-box">
+    <h2>Login</h2>
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <button>Login</button>
+  </div>
+</section>
+
+<!-- SLIDESHOW -->
+<section class="section">
+  <h2>Gallery</h2>
+  <div class="slideshow-container">
+    <img class="slide" src="ff1.jpeg">
+    <img class="slide" src="ff2.jpeg">
+    <img class="slide" src="ff3.jpeg">
+  </div>
+</section>
+
+<!-- PROFILE CARD -->
+<section class="section">
+  <div class="profile-card">
+    <img src="ff4.jpeg">
+    <h3>NUR ALIYA FARHANI</h3>
+    <p>Web Design Student</p>
+
+    <button onclick="toggleContact()">Contact</button>
+
+    <div id="contact-info">
+      <p><i class="fa fa-phone"></i> 017-5475005</p>
+      <p><i class="fa fa-envelope"></i> aliyafrhni@gmail.com</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRESS -->
+<section class="section">
+  <h2>Progress</h2>
+  <div class="progress-container">
+    <div id="progress-bar"></div>
+  </div>
+  <button onclick="increaseProgress()">Increase</button>
+</section>
+
+<!-- COLLAPSIBLE -->
+<section class="section">
+  <button class="collapsible">More Info</button>
+  <div class="content">
+    <p>This is collapsible content.</p>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
